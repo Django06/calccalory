@@ -13,7 +13,7 @@ class buttonborder: UIButton {
     override func awakeFromNib() {
         super .awakeFromNib()
         layer.borderWidth = 1
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = UIColor.red.cgColor
     }
 
     /*

@@ -9,11 +9,14 @@
 import UIKit
 
 class ViewController2: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    var numberofweek = ["1 to 2","3 to 4","5 to 6","7"]
+    var numberofweek = ["Sedentary (0-1)time/week ","Lightly Active (2-3)time/week ","Moderately Active (4-5)time/week","Very Active +6 time/week"]
     var sex = ["Male","Famel"]
     var selectedsex = 0
     var selectednweek = 0
+    var crl :Double?
+    var BMR :Double?
     @IBOutlet weak var picker2: UIPickerView!
+    @IBOutlet weak var lar: UILabel!
     @IBOutlet weak var labelresult: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var laAge: UITextField!
@@ -51,42 +54,75 @@ class ViewController2: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
     
     
     @IBAction func buttresult(_ sender: Any) {
+        performSegue(withIdentifier: "show", sender: nil)
+
         let kg  = Double(laKG.text!)
         let cm = Double(laCM.text!)
         let age = Int(laAge.text!)
-        var BMR :Double?
+      
+       
         var p1 : Double
         var p2 : Double
         var p3 : Double
+        
+       
         if selectedsex == 0 {
             p1 = 6.3 * ( Double(kg!) * 2.20 )
             p2 = 12.9 * ( Double(cm!) * 0.40 )
             p3 = Double(age!) * 6.8
             BMR = 66 + p1 + p2 - p3
-        } else
-        {    p1 = 4.3  * ( Double(kg!) * 2.20 )
-             p2  = 4.7 * ( Double(cm!) * 0.40 )
-              p3 = Double(age!) * 4.7
+        } else{
+            p1 = 4.3  * ( Double(kg!) * 2.20 )
+            p2  = 4.7 * ( Double(cm!) * 0.40 )
+            p3 = Double(age!) * 4.7
             BMR = 655 + p1 + p2 - p3
-      
+            
         }
         
+    /*
         if selectednweek == 0 {
             BMR = BMR! * 1.2
         } else if selectednweek == 1 {
             BMR = BMR! * 1.375
         } else if selectednweek == 2 {
             BMR = BMR! * 1.55
-        }else  {
+        } else  {
             BMR = BMR! * 1.725
         }
-            
-        labelresult.text = " your BMR is \(BMR as Double?)"
+        */
         
+      crl = getbtm(selectednweek: selectednweek, BMR: BMR!)
+        print(crl! as Any)
         
         
     }
     
+    func getbtm(selectednweek:Int, BMR:Double) -> Double {
+     
+        if selectednweek == 0 {
+            return BMR * 1.2
+        } else if selectednweek == 1 {
+            return BMR * 1.375
+        } else if selectednweek == 2 {
+            return BMR * 1.55
+        } else  {
+            return BMR * 1.725
+        }
+    }
+    
+    
+    
+    
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ViewController3 {
+            destination.ctrle = 1343
+            
+        }
+    }
+    
+
+
     /*
     // MARK: - Navigation
 
