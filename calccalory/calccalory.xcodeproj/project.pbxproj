@@ -16,6 +16,8 @@
 		130B5D6A21A70C0B009D139B /* calcVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130B5D6921A70C0B009D139B /* calcVC.swift */; };
 		130B5D6C21A70DB8009D139B /* buttonborder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130B5D6B21A70DB8009D139B /* buttonborder.swift */; };
 		1333BBE621A752FD00E9271E /* showVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333BBE521A752FD00E9271E /* showVC.swift */; };
+		139FD07921A9957B0088DD4F /* textfeildstyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FD07821A9957B0088DD4F /* textfeildstyle.swift */; };
+		139FD07B21A9976D0088DD4F /* pickerstyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FD07A21A9976D0088DD4F /* pickerstyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		130B5D6921A70C0B009D139B /* calcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcVC.swift; sourceTree = "<group>"; };
 		130B5D6B21A70DB8009D139B /* buttonborder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonborder.swift; sourceTree = "<group>"; };
 		1333BBE521A752FD00E9271E /* showVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showVC.swift; sourceTree = "<group>"; };
+		139FD07821A9957B0088DD4F /* textfeildstyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfeildstyle.swift; sourceTree = "<group>"; };
+		139FD07A21A9976D0088DD4F /* pickerstyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerstyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				130B5D6B21A70DB8009D139B /* buttonborder.swift */,
 				13051B7021A8C5560029CB18 /* bottonborder2.swift */,
+				139FD07821A9957B0088DD4F /* textfeildstyle.swift */,
+				139FD07A21A9976D0088DD4F /* pickerstyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 				1333BBE621A752FD00E9271E /* showVC.swift in Sources */,
 				130B5D5721A702BD009D139B /* welcomVC.swift in Sources */,
 				13051B7121A8C5560029CB18 /* bottonborder2.swift in Sources */,
+				139FD07B21A9976D0088DD4F /* pickerstyle.swift in Sources */,
+				139FD07921A9957B0088DD4F /* textfeildstyle.swift in Sources */,
 				130B5D5521A702BD009D139B /* AppDelegate.swift in Sources */,
 				130B5D6A21A70C0B009D139B /* calcVC.swift in Sources */,
 				130B5D6C21A70DB8009D139B /* buttonborder.swift in Sources */,
