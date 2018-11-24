@@ -61,6 +61,7 @@ class calcVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         BMR = getBMR(kg: kg, cm: cm, age: age)
         result = getResult(selectednweek: selectednweek, BMR: BMR!)
         calcbut.isEnabled=true
+        calcbut.isHidden = false
     }
     
     
