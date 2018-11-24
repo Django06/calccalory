@@ -12,11 +12,15 @@ class showVC: UIViewController {
     
  var ctrle : Double!
     @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var getwithloswith: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         result.text = "you need :\(ctrle!) Cal"
+        getwithloswith.text = "to lose Weight :\(ctrle!-500) cal  to get Weight : \(ctrle!+500) cal "
         // Do any additional setup after loading the view.
     }
+    
+    
     
     
     
