@@ -18,33 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodybg" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-Td-blH">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcombg" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-Td-blH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-sP-3T0" customClass="startbutt" customModule="calccalory" customModuleProvider="target">
-                                <rect key="frame" x="46" y="298.5" width="180" height="70"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="112.5" y="308.5" width="150" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="3Wj-3s-odg"/>
-                                    <constraint firstAttribute="width" constant="180" id="yEY-6Q-v6T"/>
+                                    <constraint firstAttribute="width" constant="150" id="6V6-fB-JyJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="afw-yK-8AD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <state key="normal" title="Get Started">
-                                    <color key="titleColor" red="0.83782988786697388" green="0.25521045923233032" blue="0.39271974563598633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="Dqh-4w-9EA" kind="show" id="w4E-ra-fl4"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OOI-sP-3T0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16Z-sR-BLW"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="57P-Ca-mYA"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9kF-89-Gol"/>
+                            <constraint firstItem="OOI-sP-3T0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dia-AL-zSg"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JSL-39-xv5"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K4f-JY-SPS"/>
-                            <constraint firstItem="OOI-sP-3T0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lFv-iu-dN8"/>
-                            <constraint firstItem="OOI-sP-3T0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="q8B-b4-DC9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -113,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="barTintColor" red="0.89916366338729858" green="0.21397101879119873" blue="0.37596756219863892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Calorie Calculator" id="u7D-T1-YbI">
@@ -224,6 +223,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.95910459756851196" green="0.16060149669647217" blue="0.35066676139831543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Resulte" id="Wnc-4a-laM">
                                         <barButtonItem key="leftBarButtonItem" systemItem="undo" id="4Bo-w9-JeF">
@@ -256,11 +258,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bodybg" width="157" height="256"/>
         <image name="foodbg" width="213" height="378.5"/>
+        <image name="welcombg" width="682.5" height="511"/>
         <image name="windowShopperBG" width="414" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w4E-ra-fl4"/>
+        <segue reference="AWh-ez-gz5"/>
     </inferredMetricsTieBreakers>
 </document>

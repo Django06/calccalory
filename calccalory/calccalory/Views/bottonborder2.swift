@@ -16,13 +16,4 @@ class bottonborder2: UIButton {
         layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
     }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
