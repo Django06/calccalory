@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController3: UIViewController {
+class showVC: UIViewController {
     
- var ctrle : Double = 0.99
+ var ctrle : Double!
     @IBOutlet weak var result: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        result.text = "you need :\(ctrle) Cal"
+        result.text = "you need :\(ctrle!) Cal"
         // Do any additional setup after loading the view.
     }
     

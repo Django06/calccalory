@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="welcomVC" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,13 +21,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bodybg" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-Td-blH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-sP-3T0" customClass="buttonborder" customModule="calccalory" customModuleProvider="target">
-                                <rect key="frame" x="67" y="306" width="118" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-sP-3T0" customClass="buttonborder" customModule="calccalory" customModuleProvider="target">
+                                <rect key="frame" x="67" y="316" width="144" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Get Started">
-                                    <color key="titleColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.95910459756851196" green="0.16060149669647217" blue="0.35066676139831543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Dqh-4w-9EA" kind="show" id="w4E-ra-fl4"/>
@@ -37,13 +36,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Si-UO-287"/>
+                            <constraint firstItem="B9h-Td-blH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5dO-bM-TBC"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CjQ-je-sGQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B9h-Td-blH" secondAttribute="trailing" id="KNm-U8-F3D"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WcY-Cf-L5Q"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y6Y-pa-vbM"/>
+                            <constraint firstItem="B9h-Td-blH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gVp-eN-7vf"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lkA-Gt-Khi"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mLS-jf-dWE"/>
+                            <constraint firstItem="B9h-Td-blH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tCg-WG-Oat"/>
                             <constraint firstItem="B9h-Td-blH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xg3-5v-xqX"/>
+                            <constraint firstItem="OOI-sP-3T0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yq9-0E-IbV"/>
+                            <constraint firstItem="B9h-Td-blH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zcs-nI-ohp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -52,77 +56,68 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller2-->
+        <!--CalcVC-->
         <scene sceneID="jfM-63-7qx">
             <objects>
-                <viewController id="Dqh-4w-9EA" customClass="ViewController2" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dqh-4w-9EA" customClass="calcVC" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4dJ-uo-OgZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your Weight in KG" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79H-eQ-Aa2">
-                                <rect key="frame" x="16" y="108" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.76419295993110115" blue="0.71280373655690377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Height in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTv-uj-LKl">
-                                <rect key="frame" x="16" y="159" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.76347869634628296" blue="0.71491789817810059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your age " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-hn-4AT">
-                                <rect key="frame" x="16" y="211" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.76347869634628296" blue="0.71491789817810059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7M-1r-OPA">
-                                <rect key="frame" x="16" y="429" width="343" height="150"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.76347869634628296" blue="0.71491789817810059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Dqh-4w-9EA" id="k9b-0C-2XL"/>
-                                    <outlet property="delegate" destination="Dqh-4w-9EA" id="m4R-6Q-abu"/>
-                                </connections>
-                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-VD-53y">
+                                <rect key="frame" x="20" y="64" width="335" height="130"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="enter your Weight in KG" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79H-eQ-Aa2">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="32.5"/>
+                                        <color key="backgroundColor" red="0.94199496507644653" green="0.74908757209777832" blue="0.73921555280685425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your Height in CM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTv-uj-LKl">
+                                        <rect key="frame" x="0.0" y="48.5" width="335" height="33"/>
+                                        <color key="backgroundColor" red="0.94198256731033325" green="0.7490609884262085" blue="0.73756474256515503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter your age " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-hn-4AT">
+                                        <rect key="frame" x="0.0" y="97.5" width="335" height="32.5"/>
+                                        <color key="backgroundColor" red="0.94198256731033325" green="0.7490609884262085" blue="0.73756474256515503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="yBL-SP-pkk"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcB-DZ-fjL">
-                                <rect key="frame" x="129" y="373" width="116" height="38"/>
+                                <rect key="frame" x="129" y="317" width="116" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jN-lr-nYj" customClass="buttonborder" customModule="calccalory" customModuleProvider="target">
-                                <rect key="frame" x="16" y="615" width="343" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jN-lr-nYj" customClass="bottonborder2" customModule="calccalory" customModuleProvider="target">
+                                <rect key="frame" x="16" y="611" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lsD-Cm-nNs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="GET RESULTE">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="buttresult:" destination="Dqh-4w-9EA" eventType="touchUpInside" id="a74-LG-IPG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="complete case to get result :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-bJ-1nE">
-                                <rect key="frame" x="78" y="61" width="218" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-ar-fwe">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-ar-fwe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.95910459756851196" green="0.16060149669647217" blue="0.35066676139831543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Caclulate your calory" id="u7D-T1-YbI">
+                                    <navigationItem title="Calorie Calculator" id="u7D-T1-YbI">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6WC-AE-slE">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
@@ -133,37 +128,69 @@
                                 </items>
                             </navigationBar>
                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-I4-1yb">
-                                <rect key="frame" x="16" y="284" width="343" height="74"/>
+                                <rect key="frame" x="16" y="235" width="343" height="74"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.76347869634628296" blue="0.71491789817810059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94198256731033325" green="0.7490609884262085" blue="0.73756474256515503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dqh-4w-9EA" id="FpA-fP-vtR"/>
                                     <outlet property="delegate" destination="Dqh-4w-9EA" id="foW-Xa-GQZ"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrw-fF-zfV">
-                                <rect key="frame" x="16" y="587" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-9I-PyY">
+                                <rect key="frame" x="141" y="202" width="93" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWx-9I-PyY">
-                                <rect key="frame" x="141" y="214" width="93" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7M-1r-OPA">
+                                <rect key="frame" x="16" y="362" width="343" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94198256731033325" green="0.7490609884262085" blue="0.73756474256515503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dqh-4w-9EA" id="k9b-0C-2XL"/>
+                                    <outlet property="delegate" destination="Dqh-4w-9EA" id="m4R-6Q-abu"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX6-bc-Iry" customClass="bottonborder2" customModule="calccalory" customModuleProvider="target">
+                                <rect key="frame" x="16" y="551" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="VOk-Xs-Ztt"/>
+                                    <constraint firstAttribute="height" constant="50" id="nK4-MQ-opg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="CALCULTE">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcbutttap:" destination="Dqh-4w-9EA" eventType="touchUpInside" id="Fb1-jT-wtp"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96205681562423706" green="0.057956640972426456" blue="0.34886962016404588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9jN-lr-nYj" firstAttribute="leading" secondItem="OPl-Yf-5qV" secondAttribute="leading" constant="16" id="1MU-Nd-i9a"/>
+                            <constraint firstItem="OPl-Yf-5qV" firstAttribute="trailing" secondItem="Ety-VD-53y" secondAttribute="trailing" constant="20" id="3xd-wJ-3Jz"/>
+                            <constraint firstItem="eb3-ar-fwe" firstAttribute="top" secondItem="4dJ-uo-OgZ" secondAttribute="top" id="5Na-fi-TS8"/>
+                            <constraint firstItem="eb3-ar-fwe" firstAttribute="leading" secondItem="OPl-Yf-5qV" secondAttribute="leading" id="ALj-eR-qgS"/>
+                            <constraint firstItem="9jN-lr-nYj" firstAttribute="top" secondItem="bX6-bc-Iry" secondAttribute="bottom" constant="10" id="GnM-de-J7n"/>
+                            <constraint firstItem="Ety-VD-53y" firstAttribute="leading" secondItem="OPl-Yf-5qV" secondAttribute="leading" constant="20" id="PZN-3s-ViQ"/>
+                            <constraint firstItem="bX6-bc-Iry" firstAttribute="leading" secondItem="OPl-Yf-5qV" secondAttribute="leading" constant="16" id="Yar-lq-jWV"/>
+                            <constraint firstItem="OPl-Yf-5qV" firstAttribute="trailing" secondItem="9jN-lr-nYj" secondAttribute="trailing" constant="16" id="juL-4b-Jc7"/>
+                            <constraint firstItem="eb3-ar-fwe" firstAttribute="trailing" secondItem="OPl-Yf-5qV" secondAttribute="trailing" id="kXS-FI-rvb"/>
+                            <constraint firstItem="Ety-VD-53y" firstAttribute="top" secondItem="eb3-ar-fwe" secondAttribute="bottom" constant="20" id="m8V-2g-waD"/>
+                            <constraint firstItem="OPl-Yf-5qV" firstAttribute="bottom" secondItem="9jN-lr-nYj" secondAttribute="bottom" constant="6" id="pmI-XX-s2L"/>
+                            <constraint firstItem="OPl-Yf-5qV" firstAttribute="trailing" secondItem="bX6-bc-Iry" secondAttribute="trailing" constant="16" id="uhI-f4-Bbj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OPl-Yf-5qV"/>
                     </view>
                     <connections>
+                        <outlet property="calcbut" destination="9jN-lr-nYj" id="2KJ-Ow-AEb"/>
                         <outlet property="laAge" destination="Pxe-hn-4AT" id="gym-2D-hdB"/>
                         <outlet property="laCM" destination="RTv-uj-LKl" id="FAW-am-ncT"/>
                         <outlet property="laKG" destination="79H-eQ-Aa2" id="bI8-O9-5DQ"/>
-                        <outlet property="lar" destination="rrw-fF-zfV" id="CCJ-Rp-fOE"/>
                         <outlet property="picker" destination="m7M-1r-OPA" id="Eg9-zY-Uow"/>
                         <outlet property="picker2" destination="xSp-I4-1yb" id="wrb-1p-5ui"/>
                         <segue destination="7XI-a1-o8O" kind="show" identifier="show" id="cOo-FL-bwD"/>
@@ -173,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="997.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--View Controller3-->
+        <!--ShowVC-->
         <scene sceneID="dm6-UP-1s2">
             <objects>
-                <viewController id="7XI-a1-o8O" customClass="ViewController3" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7XI-a1-o8O" customClass="showVC" customModule="calccalory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRv-dK-k1N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,7 +222,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMR-yg-JyL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="1" green="0.2332205125" blue="0.058407587439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.95910459756851196" green="0.16060149669647217" blue="0.35066676139831543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Resulte" id="Wnc-4a-laM">
                                         <barButtonItem key="leftBarButtonItem" systemItem="undo" id="4Bo-w9-JeF">

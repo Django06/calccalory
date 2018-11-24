@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ViewController2: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class calcVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     var numberofweek = ["Sedentary (0-1)time/week ","Lightly Active (2-3)time/week ","Moderately Active (4-5)time/week","Very Active +6 time/week"]
     var sex = ["Male","Famel"]
     var selectedsex = 0
     var selectednweek = 0
-    var crl :Double?
     var BMR :Double?
+    var result :Double?
     @IBOutlet weak var picker2: UIPickerView!
-    @IBOutlet weak var lar: UILabel!
     @IBOutlet weak var labelresult: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var laAge: UITextField!
     @IBOutlet weak var laCM: UITextField!
     @IBOutlet weak var laKG: UITextField!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -50,55 +50,34 @@ class ViewController2: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
        
     }
     
-    
-    
-    
-    @IBAction func buttresult(_ sender: Any) {
-        performSegue(withIdentifier: "show", sender: nil)
-
-        let kg  = Double(laKG.text!)
-        let cm = Double(laCM.text!)
-        let age = Int(laAge.text!)
-      
-       
-        var p1 : Double
-        var p2 : Double
-        var p3 : Double
+  
+    @IBOutlet weak var calcbut: bottonborder2!
+    @IBAction func calcbutttap(_ sender: Any) {
+        let kg  = Double(laKG.text!)!
+        let cm = Double(laCM.text!)!
+        let age = Int(laAge.text!)!
         
-       
+        
+        BMR = getBMR(kg: kg, cm: cm, age: age)
+        result = getResult(selectednweek: selectednweek, BMR: BMR!)
+        calcbut.isEnabled=true
+    }
+    
+    
+    
+    func getBMR (kg:Double,cm:Double,age:Int) -> Double{
         if selectedsex == 0 {
-            p1 = 6.3 * ( Double(kg!) * 2.20 )
-            p2 = 12.9 * ( Double(cm!) * 0.40 )
-            p3 = Double(age!) * 6.8
-            BMR = 66 + p1 + p2 - p3
+             BMR = 66 + (6.3 * ( Double(kg) * 2.20 )) + (12.9 * ( Double(cm) * 0.40 )) - (Double(age) * 6.8)
         } else{
-            p1 = 4.3  * ( Double(kg!) * 2.20 )
-            p2  = 4.7 * ( Double(cm!) * 0.40 )
-            p3 = Double(age!) * 4.7
-            BMR = 655 + p1 + p2 - p3
+            BMR = 655 + (4.3  * ( Double(kg) * 2.20 )) + (4.7 * ( Double(cm) * 0.40 )) - (Double(age) * 4.7)
             
         }
         
-    /*
-        if selectednweek == 0 {
-            BMR = BMR! * 1.2
-        } else if selectednweek == 1 {
-            BMR = BMR! * 1.375
-        } else if selectednweek == 2 {
-            BMR = BMR! * 1.55
-        } else  {
-            BMR = BMR! * 1.725
-        }
-        */
         
-      crl = getbtm(selectednweek: selectednweek, BMR: BMR!)
-        print(crl! as Any)
-        
-        
+      return BMR!
     }
-    
-    func getbtm(selectednweek:Int, BMR:Double) -> Double {
-     
+    func getResult(selectednweek:Int, BMR:Double) -> Double {
+        
         if selectednweek == 0 {
             return BMR * 1.2
         } else if selectednweek == 1 {
@@ -110,27 +89,23 @@ class ViewController2: UIViewController,UIPickerViewDelegate,UIPickerViewDataSou
         }
     }
     
-    
-    
-    
+    @IBAction func buttresult(_ sender: Any) {
+        performSegue(withIdentifier: "show", sender: nil)
+        
+        print(BMR!)
+        print(result!)
+        
+        }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ViewController3 {
-            destination.ctrle = 1343
-            
+        if let destination = segue.destination as? showVC {
+            destination.ctrle = ceil(result!)
         }
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
+    
+    
+    
 }
